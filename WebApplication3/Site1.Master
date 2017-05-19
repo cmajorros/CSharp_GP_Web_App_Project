@@ -1,0 +1,372 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication3.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+       <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1100px;
+        }
+        .style2
+        {
+            background-color: #99CC00;
+        }
+        .style5
+        {
+            font-size: medium;
+        }
+        .style6
+        {
+            color: #FFFFFF;
+            text-align: center;
+            background-color: #99CC00;
+        }
+        .style7
+        {
+            background-color: #99CC00;
+            width: 970px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server" class="page">
+    <div>
+        <table cellpadding="0" cellspacing="0" class="style1">
+            <tr>
+                <td class="style7">
+                    <asp:Image ID="Image1" runat="server" Height="71px" ImageUrl="~/image/logo.gif" 
+                        Width="147px" />
+                </td>
+                <td class="style2">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="LinkButton2" runat="server" Font-Overline="False" 
+                        Font-Size="Small" Font-Underline="True" ForeColor="White" 
+                        onclick="LinkButton2_Click">Log Out</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2" colspan="2">
+                    <br />
+                    <asp:Menu ID="MenuTest" runat="server" CssClass="menu" EnableViewState="False" 
+                        IncludeStyleBlock="False" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" 
+                                NavigateUrl="~/firstPage/Welcome Admin.aspx">
+                                <asp:MenuItem NavigateUrl="~/firstPage/Welcome Volunteer Coordinator.aspx" 
+                                    Text="Volunteer Co" Value="Volunteer Co"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/firstPage/Welcome ActionTeam.aspx" 
+                                    Text="Action Co" Value="Action Co"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/firstPage/Welcome Campaigner.aspx" 
+                                    Text="Campaigner" Value="Campaigner"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/firstPage/Welcome Campaign Director.aspx" 
+                                    Text="Campaign Director" Value="Campaign Director"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Master Data" Value="Master Data">
+                                <asp:MenuItem Text="Skills" Value="Skills" 
+                                    NavigateUrl="~/Master Data MGT/Manage Skill.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Skill Type" Value="Skill Type" 
+                                    NavigateUrl="~/Master Data MGT/Manage Skill Types .aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Skill Item" Value="Skill Item" 
+                                    NavigateUrl="~/Master Data MGT/Manage Skill items.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Budget Type" 
+                                    NavigateUrl="~/Master Data MGT/Budget Type.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Budget" Value="Budget" 
+                                    NavigateUrl="~/Master Data MGT/Budget.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Action Type" Value="Action Type" 
+                                    NavigateUrl="~/Master Data MGT/Action Types.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Equipment Type" Value="New Item" 
+                                    NavigateUrl="~/Master Data MGT/Equipment Types.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Equipment" Value="Equipment" 
+                                    NavigateUrl="~/Master Data MGT/Equipment.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Interest" Value="New Item" 
+                                    NavigateUrl="~/Master Data MGT/Interest.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Joined Area" Value="New Item" 
+                                    NavigateUrl="~/Master Data MGT/Join Area.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Join Time" Value="New Item" 
+                                    NavigateUrl="~/Master Data MGT/Join Time.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Training Category" Value="New Item" 
+                                    NavigateUrl="~/Master Data MGT/Training Catagories.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Training Team" Value="New Item" 
+                                    NavigateUrl="~/Master Data MGT/Training Team.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Master Data MGT/Training Type.aspx" 
+                                    Text="Training Type" Value="Training Type"></asp:MenuItem>
+                                <asp:MenuItem Text="Report" Value="Report">
+                                    <asp:MenuItem NavigateUrl="~/Report/MSD-CTTY Report .aspx" 
+                                        Text="Campaign Type Report" Value="Campaign Type Report"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Report/MSD-EquipmentReport.aspx" 
+                                        Text="Training Equipment Report" Value="Training Equipment Report">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Report/MSD-TTYReport.aspx" 
+                                        Text="Training Type Report" Value="Training Type Report"></asp:MenuItem>
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Volunteer and Activity" Value="Volunteer and Activity">
+                                <asp:MenuItem Text="Volunteer" Value="New Item">
+                                    <asp:MenuItem NavigateUrl="~/Volunteer MGT/EditVolunteer.aspx" 
+                                        Text="Volunteer Detail" Value="Volunteer Detail"></asp:MenuItem>
+                                    <asp:MenuItem Text="Report" Value="Report"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="General Activity" Value="New Item">
+                                    <asp:MenuItem NavigateUrl="~/Volunteer MGT/insert new ga.aspx" 
+                                        Text="New General Activity" Value="New General Activity"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Volunteer MGT/GA Search Result .aspx" 
+                                        Text="Edit General Activity" Value="Edit General Activity"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Volunteer MGT/GA Search Result .aspx" 
+                                        Text="Cancel General Activity" Value="Search General Activity">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Assign Volunteer" Value="Assign Volunteer">
+                                        <asp:MenuItem NavigateUrl="~/Volunteer MGT/SearchGA(VC).aspx" 
+                                            Text="Select Volunteer" Value="Select Volunteer"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/Volunteer MGT/UpdateVStatusToConfirm.aspx" 
+                                            Text="Confirmed Volunteer" Value="Confirmed Volunteer"></asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/Volunteer MGT/UpdateJoinVPlusClose.aspx" 
+                                            Text="Joined Volunteer" Value="Joined Volunteer"></asp:MenuItem>
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Report" Value="Report"></asp:MenuItem>
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Training" Value="Training">
+                                <asp:MenuItem Text="Training" Value="New Item">
+                                    <asp:MenuItem NavigateUrl="~/Training/Add new training detail .aspx" 
+                                        Text="New Training" Value="New Item"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Training/SearchTraining .aspx" 
+                                        Text="Edit Training" Value="New Item"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Training/SearchTraining .aspx" 
+                                        Text="Cancel Training" Value="New Item"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Training/Search Training (forVC).aspx" 
+                                        Text="Select Volunteer" Value="New Item"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Training/SearchTraining(UpdateVStatusConfirm).aspx" 
+                                        Text="Update Confirm Volunteer" Value="New Item"></asp:MenuItem>
+                                    <asp:MenuItem Text="Close Training " Value="Close Training ">
+                                        <asp:MenuItem NavigateUrl="~/Training/UpdateJoinedVolunteer.aspx" 
+                                            Text="Update Joined Volunteer" Value="Update Joined Volunteer">
+                                        </asp:MenuItem>
+                                    </asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Report" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Campaign" Value="Campaign">
+                                <asp:MenuItem Text="Campaign" Value="New Item">
+                                    <asp:MenuItem NavigateUrl="~/Campaign MGT/New Campaign.aspx" 
+                                        Text="New Campaign" Value="New Campaign"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Campaign MGT/Search Campaign.aspx" 
+                                        Text="Edit Campaign" Value="Edit Campaign"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Campaign MGT/EditCampaign.aspx" 
+                                        Text="Cancel Campaign" Value="Cancel Campaign"></asp:MenuItem>
+                                    <asp:MenuItem Text="Select Volunteer" Value="Select Volunteer"></asp:MenuItem>
+                                    <asp:MenuItem Text="Update Confirm Volunteer" Value="Update Confirm Volunteer">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="Close Campaign" Value="Close Campaign">
+                                        <asp:MenuItem Text="Update Joined Volunteer" Value="Update Joined Volunteer">
+                                        </asp:MenuItem>
+                                    </asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Report" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Campaigner Media" Value="Campaigner Media">
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Mangement Information" Value="Mangement Information">
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Account " Value="Account ">
+                                <asp:MenuItem NavigateUrl="~/Account/Change Password.aspx" 
+                                    Text="Change Password" Value="Change Password"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Account/User MGT.aspx" 
+                                    Text="User Management" Value="User Management"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    <asp:Menu ID="MenuV" runat="server" CssClass="menu" EnableViewState="False" 
+                        IncludeStyleBlock="False" Orientation="Horizontal" Visible="False">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="Master Data" Value="Master Data">
+                                <asp:MenuItem Text="Skills" Value="Skills"></asp:MenuItem>
+                                <asp:MenuItem Text="Skill Type" Value="Skill Type"></asp:MenuItem>
+                                <asp:MenuItem Text="Skill Item" Value="Skill Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Budget Type"></asp:MenuItem>
+                                <asp:MenuItem Text="Budget" Value="Budget"></asp:MenuItem>
+                                <asp:MenuItem Text="Action Type" Value="Action Type"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Volunteer and Activity" Value="Volunteer and Activity">
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Training" Value="Training">
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Campaign" Value="Campaign">
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Account/Change Password.aspx" Text="Account" 
+                                Value="Account"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    <asp:Menu ID="MenuAC" runat="server" CssClass="menu" EnableViewState="False" 
+                        IncludeStyleBlock="False" Orientation="Horizontal" Visible="False">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="Master Data" Value="Master Data">
+                                <asp:MenuItem Text="Skills" Value="Skills"></asp:MenuItem>
+                                <asp:MenuItem Text="Skill Type" Value="Skill Type"></asp:MenuItem>
+                                <asp:MenuItem Text="Skill Item" Value="Skill Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Budget Type"></asp:MenuItem>
+                                <asp:MenuItem Text="Budget" Value="Budget"></asp:MenuItem>
+                                <asp:MenuItem Text="Action Type" Value="Action Type"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Training" Value="Training">
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Campaign" Value="Campaign">
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Account/Change Password.aspx" Text="Account" 
+                                Value="Account"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    <asp:Menu ID="MenuC" runat="server" CssClass="menu" EnableViewState="False" 
+                        IncludeStyleBlock="False" Orientation="Horizontal" Visible="False">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="Master Data" Value="Master Data">
+                                <asp:MenuItem Text="Skills" Value="Skills"></asp:MenuItem>
+                                <asp:MenuItem Text="Skill Type" Value="Skill Type"></asp:MenuItem>
+                                <asp:MenuItem Text="Skill Item" Value="Skill Item"></asp:MenuItem>
+                                <asp:MenuItem Text="Budget Type"></asp:MenuItem>
+                                <asp:MenuItem Text="Budget" Value="Budget"></asp:MenuItem>
+                                <asp:MenuItem Text="Action Type" Value="Action Type"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Campaign" Value="Campaign">
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Campaigner Media" Value="Campaigner Media">
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Account/Change Password.aspx" Text="Account" 
+                                Value="Account"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    <asp:Menu ID="MenuCD" runat="server" CssClass="menu" EnableViewState="False" 
+                        IncludeStyleBlock="False" Orientation="Horizontal" Visible="False">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="Mangement Information" Value="Mangement Information">
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Account/Change Password.aspx" Text="Account" 
+                                Value="Account"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    &nbsp; <span class="style5">&nbsp;&nbsp;&nbsp;
+                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Welcome ! </span>&nbsp;&nbsp;<asp:Label ID="lblUserName" runat="server" 
+                        Font-Size="Medium" ForeColor="#99CC00" Text="UserName"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <p>
+                            <br />
+                        </p>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="style6" colspan="2">
+                    <br />
+                    All right are reserved by <a>http://gvolunteer.com</a><br />
+                    <br />
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

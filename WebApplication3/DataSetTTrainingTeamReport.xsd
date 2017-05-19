@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetTTrainingTeamReport" targetNamespace="http://tempuri.org/DataSetTTrainingTeamReport.xsd" xmlns:mstns="http://tempuri.org/DataSetTTrainingTeamReport.xsd" xmlns="http://tempuri.org/DataSetTTrainingTeamReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GPConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GPConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Training Team and Menber ReportTableAdapter" GeneratorDataComponentClassName="Training_Team_and_Menber_ReportTableAdapter" Name="Training Team and Menber Report" UserDataComponentName="Training Team and Menber ReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GPConnectionString (Web.config)" DbObjectName="GP.dbo.[Training Team and Menber Report]" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TM_ID, TT_Name, V_ID, V_MobileNo1, V_Email, V_Name, V_LastName, TT_ID, TP_ID, TP_Name FROM dbo.[Training Team and Menber Report]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TM_ID" DataSetColumn="TM_ID" />
+              <Mapping SourceColumn="TT_Name" DataSetColumn="TT_Name" />
+              <Mapping SourceColumn="V_ID" DataSetColumn="V_ID" />
+              <Mapping SourceColumn="V_MobileNo1" DataSetColumn="V_MobileNo1" />
+              <Mapping SourceColumn="V_Email" DataSetColumn="V_Email" />
+              <Mapping SourceColumn="V_Name" DataSetColumn="V_Name" />
+              <Mapping SourceColumn="V_LastName" DataSetColumn="V_LastName" />
+              <Mapping SourceColumn="TT_ID" DataSetColumn="TT_ID" />
+              <Mapping SourceColumn="TP_ID" DataSetColumn="TP_ID" />
+              <Mapping SourceColumn="TP_Name" DataSetColumn="TP_Name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetTTrainingTeamReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSetTTrainingTeamReport" msprop:Generator_UserDSName="DataSetTTrainingTeamReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Training_x0020_Team_x0020_and_x0020_Menber_x0020_Report" msprop:Generator_TableClassName="Training_Team_and_Menber_ReportDataTable" msprop:Generator_TableVarName="tableTraining_Team_and_Menber_Report" msprop:Generator_TablePropName="Training_Team_and_Menber_Report" msprop:Generator_RowDeletingName="Training_Team_and_Menber_ReportRowDeleting" msprop:Generator_UserTableName="Training Team and Menber Report" msprop:Generator_RowChangingName="Training_Team_and_Menber_ReportRowChanging" msprop:Generator_RowEvHandlerName="Training_Team_and_Menber_ReportRowChangeEventHandler" msprop:Generator_RowDeletedName="Training_Team_and_Menber_ReportRowDeleted" msprop:Generator_RowEvArgName="Training_Team_and_Menber_ReportRowChangeEvent" msprop:Generator_RowChangedName="Training_Team_and_Menber_ReportRowChanged" msprop:Generator_RowClassName="Training_Team_and_Menber_ReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TM_ID" msprop:Generator_ColumnVarNameInTable="columnTM_ID" msprop:Generator_ColumnPropNameInRow="TM_ID" msprop:Generator_ColumnPropNameInTable="TM_IDColumn" msprop:Generator_UserColumnName="TM_ID" type="xs:int" />
+              <xs:element name="TT_Name" msprop:Generator_ColumnVarNameInTable="columnTT_Name" msprop:Generator_ColumnPropNameInRow="TT_Name" msprop:Generator_ColumnPropNameInTable="TT_NameColumn" msprop:Generator_UserColumnName="TT_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="V_ID" msprop:Generator_ColumnVarNameInTable="columnV_ID" msprop:Generator_ColumnPropNameInRow="V_ID" msprop:Generator_ColumnPropNameInTable="V_IDColumn" msprop:Generator_UserColumnName="V_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="V_MobileNo1" msprop:Generator_ColumnVarNameInTable="columnV_MobileNo1" msprop:Generator_ColumnPropNameInRow="V_MobileNo1" msprop:Generator_ColumnPropNameInTable="V_MobileNo1Column" msprop:Generator_UserColumnName="V_MobileNo1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="V_Email" msprop:Generator_ColumnVarNameInTable="columnV_Email" msprop:Generator_ColumnPropNameInRow="V_Email" msprop:Generator_ColumnPropNameInTable="V_EmailColumn" msprop:Generator_UserColumnName="V_Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="V_Name" msprop:Generator_ColumnVarNameInTable="columnV_Name" msprop:Generator_ColumnPropNameInRow="V_Name" msprop:Generator_ColumnPropNameInTable="V_NameColumn" msprop:Generator_UserColumnName="V_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="V_LastName" msprop:Generator_ColumnVarNameInTable="columnV_LastName" msprop:Generator_ColumnPropNameInRow="V_LastName" msprop:Generator_ColumnPropNameInTable="V_LastNameColumn" msprop:Generator_UserColumnName="V_LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TT_ID" msprop:Generator_ColumnVarNameInTable="columnTT_ID" msprop:Generator_ColumnPropNameInRow="TT_ID" msprop:Generator_ColumnPropNameInTable="TT_IDColumn" msprop:Generator_UserColumnName="TT_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="TP_ID" msprop:Generator_ColumnVarNameInTable="columnTP_ID" msprop:Generator_ColumnPropNameInRow="TP_ID" msprop:Generator_ColumnPropNameInTable="TP_IDColumn" msprop:Generator_UserColumnName="TP_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="TP_Name" msprop:Generator_ColumnVarNameInTable="columnTP_Name" msprop:Generator_ColumnPropNameInRow="TP_Name" msprop:Generator_ColumnPropNameInTable="TP_NameColumn" msprop:Generator_UserColumnName="TP_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Training_x0020_Team_x0020_and_x0020_Menber_x0020_Report" />
+      <xs:field xpath="mstns:TM_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

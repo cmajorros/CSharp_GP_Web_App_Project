@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication3.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style4
+        {
+            position: relative;
+            margin: 0px;
+            padding: 0px;
+            background: #99CC00;
+            width: 100%;
+            left: 0px;
+            top: 0px;
+        }
+                
+        .style9
+        {
+            clear: both;
+            text-align: center;
+            background-color:#99CC00;
+        }
+        .style13
+        {
+            color: #006600;
+        }
+        .style14
+        {
+            color: #003300;
+        }
+        </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="style4">
+         <div>
+        &nbsp;<asp:Image ID="Image1" runat="server" Height="69px" 
+                 ImageUrl="~/image/logo.gif" Width="137px" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <asp:LinkButton ID="Login" runat="server" Font-Size="12pt" ForeColor="White" 
+                 onclick="Login_Click">Staff Login</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                    onmenuitemclick="NavigationMenu_MenuItemClick">
+                    <DynamicSelectedStyle BackColor="#006600" />
+                    <Items>
+                        <asp:MenuItem Text="หน้าแรก" Value="หน้าแรก" 
+                            NavigateUrl="~/General/Home.aspx"/>
+                        <asp:MenuItem Text="เกี่ยวกับเรา" Value="เกี่ยวกับเรา" 
+                            NavigateUrl="~/General/About.aspx"/>
+                        <asp:MenuItem Text="อาสาสมัคร" Value="อาสาสมัคร">
+                            <asp:MenuItem Text="สมัครอาสาสมัคร" Value="สมัครอาสาสมัคร" 
+                                NavigateUrl="~/Volunteer MGT/Apply volunteer.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="ชัยชนะของเรา" Value="ชัยชนะของเรา"></asp:MenuItem>
+                        <asp:MenuItem Text="ติดต่อเรา" Value="ติดต่อเรา" 
+                            NavigateUrl="~/General/Contact Us.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+            <center>
+                <asp:Image ID="Image2" runat="server" ImageUrl="~/image/banner.gif" />
+        </center>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            <br />
+        <div class="style9">
+            <br />
+            <span class="style13">All rights are reserved by </span> 
+            <a href="http://www.gvoluteer.org/th" class="style14">http://www.gvoluteer.org/th</a>
+            <br class="style14" />
+            
+            <br />
+        </div>
+    </div>
+    <div class="footer">
+        
+        <br />
+        
+    </div>
+    </form>
+</body>
+</html>
